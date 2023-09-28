@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.grownSpin {
+    transform: scale(1.5) rotate(180deg);
+}
+
+.grownShow1 {
+    opacity: 1;
+    transform: translateX(-150%) scale(1.5);
+}
+
+.grownShow2 {
+    opacity: 1;
+    transform: translate(-50%, 400%) scale(1.5);
+}
+
+.backSmoke {
+    background-color: rgba(0, 0, 0, 0.594);
+    box-shadow: 0 0 50px 150px rgba(0, 0, 0, 0.594);
+}
+
+.question {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(23 37 84);
+    width: 75%;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    border-radius: 6px;
+}
+
+.answer {
+    background-color: rgb(30 58 138);
+    font-size: 1.2rem;
+    width: fit-content;
+    padding: 0 10px;
+}
+
+#users {
+    width: 50%;
+    background-color: black;
+    color: white;
+}
+
+dialog::backdrop {
+    background-color: rgba(235, 168, 44, 0.63);
+}
+
+.answerContainer {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 1fr;
+}
+
+@media only screen and (min-width: 821px) {
+    .answerContainer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
