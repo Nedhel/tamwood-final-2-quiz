@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quiz</title>
+        <link href="/dist/output.css" rel="stylesheet" />
+        <script src="./js/script.js"></script>
+    </head>
+    <body class="bg-[url('../img/background.svg')] bg-cover overflow-hidden">
+        <nav
+            class="bg-transparent border-b-2 border-b-orange-600 shadow-md shadow-orange-600 flex justify-around items-center md:text-2xl text-sm font-bold"
+        >
+            <div>
+                <img src="./img/quiz-log.png" alt="Logo" class="w-28" />
+            </div>
+            <div>Your Score: <span id="score"></span></div>
+            <div>Player: <span id="player"></span></div>
+        </nav>
+        <div
+            class="absolute right-0 top-1/4 w-fit rounded-full transition-all"
+            id="backMenu"
+        >
+            <img
+                src="./img/blob.svg"
+                alt="random shape for menu"
+                class="w-24 transition-all"
+                id="blob"
+                onclick="openAuxmenu()"
+            />
+            <h1
+                class="absolute top-1/4 left-1/4 text-xs opacity-0 transition-all font-bold text-white cursor-pointer"
+                id="menuAux1"
+                onclick="changePlayerModal()"
+            >
+                Change User
+            </h1>
+            <h1
+                class="absolute top-1/4 left-1/4 text-xs opacity-0 transition-all font-bold text-white cursor-pointer"
+                id="menuAux2"
+            >
+                Delete Score
+            </h1>
+        </div>
+        <dialog id="players">
+            <h1 class="text-2xl font-bold">Select user:</h1>
+            <div class="flex flex-col items-center justify-center">
+                <div
+                    class="font-semibold cursor-pointer"
+                    onclick="pickPlayer('Zalpa')"
+                >
+                    Zalpa
+                </div>
+                <div
+                    class="font-semibold cursor-pointer"
+                    onclick="pickPlayer('Carlos')"
+                >
+                    Carlos
+                </div>
+                <div
+                    class="font-semibold cursor-pointer"
+                    onclick="pickPlayer('Nedhel')"
+                >
+                    Nedhel
+                </div>
+            </div>
+        </dialog>
+        <section
+            class="flex flex-col gap-3 justify-center items-center py-16"
+            id="content"
+        >
+            <h1 class="text-4xl font-extrabold text-orange-600" id="msjInitial">
+                Select an User
+            </h1>
+            <button
+                class="bg-blue-900 px-5 rounded-md text-white opacity-50"
+                id="buttonInitial"
+                disabled
+                onclick="getQuestions()"
+            >
+                Start Game
+            </button>
+        </section>
+        <footer
+            class="bg-blue-950 text-white absolute bottom-0 left-0 right-0 flex flex-wrap justify-center"
+        >
+            <div
+                class="flex-initial w-52 flex flex-col justify-center items-center"
+            >
+                <h3 class="text-2xl font-semibold text-orange-200">
+                    Information
+                </h3>
+                <a href="">About us</a>
+                <a href="">Careers</a>
+                <a href="">Delivery</a>
+                <a href="">Online Stores</a>
+            </div>
+            <div
+                class="flex-initial w-52 flex flex-col justify-center items-center"
+            >
+                <h3 class="text-2xl font-semibold text-orange-200">Service</h3>
+                <a href="">Shipping</a>
+                <a href="">Help</a>
+                <a href="">Returns</a>
+                <a href="">My Account</a>
+            </div>
+            <div
+                class="flex-initial w-52 flex flex-col justify-center items-center"
+            >
+                <p>© Copyright 2023 Zalpa</p>
+            </div>
+        </footer>
+    </body>
+</html>
